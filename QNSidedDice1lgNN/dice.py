@@ -3,7 +3,7 @@ from qiskit.providers.aer import QasmSimulator
 from qiskit_ibm_provider import IBMProvider, least_busy
 import math
 
-print('='*50 + '\nQNSidedDice1lgNN-1.\nCode by Luiz Filipi Anderson de Sousa Moura\n' + '='*50)
+print('='*50 + '\nQNSidedDice1lgNN.\nCode by Luiz Filipi Anderson de Sousa Moura\n' + '='*50)
 
 try:
     realDevice = str()
