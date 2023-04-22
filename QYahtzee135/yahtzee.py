@@ -3,7 +3,7 @@ from qiskit import IBMQ, QuantumCircuit, QuantumRegister, ClassicalRegister
 from qiskit.providers.aer import QasmSimulator
 from qiskit_ibm_provider import IBMProvider, least_busy
 
-print('='*50 + '\nCode by Luiz Filipi Anderson de Sousa Moura\n' + '='*50)
+print('='*50 + '\nQYahtzee135.\nCode by Luiz Filipi Anderson de Sousa Moura\n' + '='*50)
 
 try:
     realDevice = str()
@@ -64,7 +64,6 @@ def rollDice():
             job = backend.run(qc, shots=1)
             result = job.result()
             counts = result.get_counts()
-            print(counts)
             if '111' not in counts and '000' not in counts:
                 return int(list(counts.keys())[0], 2)
     elif nQubits == '5':
@@ -75,7 +74,6 @@ def rollDice():
         job = backend.run(qc, shots=1)
         result = job.result()
         counts = result.get_counts()
-        print(counts)
         return [int(i) for i in str(list(counts.keys())[0])].count(1) + 1
 
 def showHelp():
